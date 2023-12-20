@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:CO2EmissionChart"
+             x:Class="CO2EmissionChart.MainPage">
+
+    <Border  Stroke="#C49B33"
+   StrokeThickness="4" Margin="20"
+   Background="#fadd84" >
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="10" />
+        </Border.StrokeShape>
+
+        <chart:SfCartesianChart>
+            <chart:SfCartesianChart.BindingContext>
+                <model:ViewModel/>
+            </chart:SfCartesianChart.BindingContext>
+            <chart:SfCartesianChart.Resources>
+                <DataTemplate x:Key="toolTip1">
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                            <Ellipse Fill="#fc3a75" HeightRequest="12" WidthRequest="12" />
+                            <Label Text="{Binding Item.Countries}" HorizontalTextAlignment="Start"
+                                VerticalTextAlignment="Center" TextColor="White"
+                                FontAttributes="Bold" FontFamily="Helvetica" 
+                                Margin="5,2,0,2" FontSize="12.5" Grid.Row="0"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Item.CO2_Emissions,StringFormat='{0} t'}"
+                                  HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                                  TextColor="White"  FontFamily="Helvetica"
+                                  Margin="5,2,0,2" FontSize="12" Grid.Row="0"/>
+                            <Label Text="{Binding Item.Fossil_fuel,StringFormat=' :  {0} kWh'}"
+                                  HorizontalTextAlignment="Start" VerticalTextAlignment="Center"  
+                                  TextColor="White"  FontFamily="Helvetica"
+                                  Margin="5,2,0,2" FontSize="12" Grid.Row="0"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </chart:SfCartesianChart.Resources>
+            <chart:SfCartesianChart.Title>
+                <Grid HorizontalOptions="Start"  Margin="5" VerticalOptions="Center" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout  Orientation="Vertical" Background="#fc3a75" Margin="0,10,0,0"  Grid.RowSpan="2"/>
+                    <VerticalStackLayout Margin="5,0,0,0" HorizontalOptions="Start"   Grid.Column="1" >
+                        <Label  Margin="3" Text="CO&#8322; Emissions Vs Fossil fuel consumption per Capita" 
+                                 LineBreakMode="WordWrap" HorizontalOptions="StartAndExpand"
+                                 VerticalOptions="CenterAndExpand" FontAttributes="Bold" 
+                                 TextColor="Black" FontSize="25" />
+                        <Label HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" 
+                                LineBreakMode="WordWrap" TextColor="Black"  FontSize="17"
+                                Text="In 2022, fossil fuel consumption was measured as the average energy use from coal, oil, and gas per person, including industry emissions" />
+                    </VerticalStackLayout>
+                </Grid>
+            </chart:SfCartesianChart.Title>
+            <chart:SfCartesianChart.XAxes>
+                <chart:NumericalAxis  >
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle TextColor="#C4020308" />
+                    </chart:NumericalAxis.LabelStyle>
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Fossil fuels (kilowatt-hours)" 
+                                           FontSize="14" TextColor="#020308" />
+                    </chart:NumericalAxis.Title>
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth ="1"
+		  Stroke="White"/>
+                    </chart:NumericalAxis.AxisLineStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.XAxes>
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis  >
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle TextColor="#C4020308" />
+                    </chart:NumericalAxis.LabelStyle>
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="CO&#8322; Emissions (tonnes)"  
+                                           FontSize="14" TextColor="#020308" />
+                    </chart:NumericalAxis.Title>
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth ="1"
+					  Stroke="White"/>
+                    </chart:NumericalAxis.AxisLineStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <chart:SfCartesianChart.ZoomPanBehavior>
+                <chart:ChartZoomPanBehavior EnableSelectionZooming="True" />
+            </chart:SfCartesianChart.ZoomPanBehavior>
+
+            <chart:ScatterSeries  EnableTooltip="True" ItemsSource="{Binding CO2_Emission_Fuel_Consumption}"
+                Fill="#C2fc3a75" Label="United States"   Stroke="#fc3a75" PointHeight="12"
+                PointWidth="12" TooltipTemplate="{StaticResource toolTip1}" StrokeWidth="2" 
+                XBindingPath="Fossil_fuel"   YBindingPath="CO2_Emissions">
+            </chart:ScatterSeries>
+
+        </chart:SfCartesianChart>
+    </Border>
+
+</ContentPage>
