@@ -12,6 +12,8 @@ We can display the information about CO2 emission and fossil fuel consumption pe
 ## Selection Zooming interactive feature
 We choose to focus on a specific area of CO2 emissions from fossil fuel consumption and zoom in based on our viewing perspective by enabling the EnableSelectionZooming property in the ZoomPanBehavior.
 
+## Output
 
+![Blog_Output](https://github.com/SyncfusionExamples/Creating-a-Scatter-Chart-Using-CO2-Emission-for-fossil-fuels-in-2022/assets/105482474/719559e6-7f9c-4c9a-b969-934ecfee9e64)
 
 
