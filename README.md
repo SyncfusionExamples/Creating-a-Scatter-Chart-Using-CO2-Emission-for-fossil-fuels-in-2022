@@ -1,5 +1,5 @@
 # Creating-a-Scatter-Chart-Using-CO2-Emission-for-fossil-fuels-in-2022.
-This sample demonstrates how to create a Scatter Chart Using CO2 Emission for fossil fuels in 2022.
+This sample demonstrates how to create a Scatter Chart in .NET MAUI [SfCartesianChart](https://help.syncfusion.com/maui/cartesian-charts/getting-started) Using CO2 Emission for fossil fuels in 2022.
 
 ## Scatter Chart
 The scatter chart is used to represent the each data point by a dot or circle with equal size. To render a scatter chart, create an instance of ScatterSeries, and add it to the Series collection property of SfCartesianChart. The segment size can be defined by using the PointHeight and PointWidth properties.
@@ -14,6 +14,6 @@ We choose to focus on a specific area of CO2 emissions from fossil fuel consumpt
 
 ## Output
 
-![Blog_Output](https://github.com/SyncfusionExamples/Creating-a-Scatter-Chart-Using-CO2-Emission-for-fossil-fuels-in-2022/assets/105482474/719559e6-7f9c-4c9a-b969-934ecfee9e64)
+![Scatter_Blog_Output](https://github.com/SyncfusionExamples/Creating-a-Scatter-Chart-Using-CO2-Emission-for-fossil-fuels-in-2022/assets/105482474/79111cb0-131f-47a8-ac25-a418ce916d9b)
 
 
