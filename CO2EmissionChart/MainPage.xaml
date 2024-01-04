@@ -47,7 +47,7 @@
                     </Grid.ColumnDefinitions>
                     <StackLayout  Orientation="Vertical" Background="#fc3a75" Margin="0,10,0,0"  Grid.RowSpan="2"/>
                     <VerticalStackLayout Margin="5,0,0,0" HorizontalOptions="Start"   Grid.Column="1" >
-                        <Label  Margin="3" Text="CO&#8322; Emissions Vs Fossil fuel consumption per Capita" 
+                        <Label  Margin="3" Text="CO&#8322; Emissions vs Fossil fuel consumption per Capita" 
                                  LineBreakMode="WordWrap" HorizontalOptions="StartAndExpand"
                                  VerticalOptions="CenterAndExpand" FontAttributes="Bold" 
                                  TextColor="Black" FontSize="25" />
