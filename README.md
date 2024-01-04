@@ -14,6 +14,6 @@ We choose to focus on a specific area of CO2 emissions from fossil fuel consumpt
 
 ## Output
 
-![Blog_Output](https://github.com/SyncfusionExamples/Creating-a-Scatter-Chart-Using-CO2-Emission-for-fossil-fuels-in-2022/assets/105482474/719559e6-7f9c-4c9a-b969-934ecfee9e64)
+![Scatter_Blog_Output](https://github.com/SyncfusionExamples/Creating-a-Scatter-Chart-Using-CO2-Emission-for-fossil-fuels-in-2022/assets/105482474/79111cb0-131f-47a8-ac25-a418ce916d9b)
 
 
