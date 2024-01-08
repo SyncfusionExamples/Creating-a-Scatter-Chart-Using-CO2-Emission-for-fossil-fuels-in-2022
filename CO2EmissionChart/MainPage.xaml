@@ -47,13 +47,13 @@
                     </Grid.ColumnDefinitions>
                     <StackLayout  Orientation="Vertical" Background="#fc3a75" Margin="0,10,0,0"  Grid.RowSpan="2"/>
                     <VerticalStackLayout Margin="5,0,0,0" HorizontalOptions="Start"   Grid.Column="1" >
-                        <Label  Margin="3" Text="CO&#8322; Emissions vs Fossil fuel consumption per Capita" 
+                        <Label  Margin="3" Text="CO&#8322; Emissions vs. Fossil Fuel Consumption per Capita" 
                                  LineBreakMode="WordWrap" HorizontalOptions="StartAndExpand"
                                  VerticalOptions="CenterAndExpand" FontAttributes="Bold" 
                                  TextColor="Black" FontSize="25" />
                         <Label HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" 
                                 LineBreakMode="WordWrap" TextColor="Black"  FontSize="17"
-                                Text="In 2022, fossil fuel consumption was measured as the average energy use from coal, oil, and gas per person, including industry emissions" />
+                                Text="In 2022, fossil fuel consumption was measured as the average amount of energy from coal, oil, and gas used per person, including industry emissions." />
                     </VerticalStackLayout>
                 </Grid>
             </chart:SfCartesianChart.Title>
